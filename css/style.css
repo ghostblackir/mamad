@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fce4ec;
+    color: #4a148c;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 36px;
+    color: #ff4081;
+    margin-bottom: 20px;
+  }
+  
+  .intro-text {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .game-container {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .question {
+    font-size: 20px;
+    margin: 20px 0;
+  }
+  
+  input[type="number"] {
+    padding: 10px;
+    font-size: 16px;
+    width: 60%;
+    border-radius: 10px;
+    border: 2px solid #ff80ab;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    padding: 12px 30px;
+    background-color: #ff80ab;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  button:hover {
+    background-color: #ff4081;
+  }
+  
+  #feedback {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  
+  #timer {
+    font-size: 20px;
+    color: #ff4081;
+    margin-top: 20px;
+  }
+  
+  #coins {
+    font-size: 20px;
+    color: #ff4081;
+    margin-top: 20px;
+  }
+  
+  #currentKid {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ff4081;
+    margin-bottom: 20px;
+  }
+  
+  #scoreBoard {
+    margin-top: 20px;
+  }
+  
+  table {
+    width: 60%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    padding: 10px;
+    border: 1px solid #ff4081;
+    text-align: center;
+  }
+  
+  th {
+    background-color: #ff80ab;
+    color: white;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f1f1f1;
+  }
+  
+  /* دکمه‌های راهنما و جواب کامل */
+#hintButton, #fullAnswerButton {
+    position: absolute; /* دکمه‌ها را نسبت به کادر بالا سمت راست قرار می‌دهیم */
+    font-size: 14px;
+    padding: 5px 10px;
+    z-index: 10;  /* اطمینان از اینکه دکمه‌ها بالاتر از سایر محتواها قرار بگیرند */
+}
+
+/* دکمه راهنما */
+#hintButton {
+    top: 10px;   /* فاصله از بالای کادر */
+    right: 10px; /* فاصله از راست کادر */
+}
+
+/* دکمه جواب کامل */
+#fullAnswerButton {
+    top: 40px;   /* فاصله از بالای کادر */
+    right: 10px; /* فاصله از راست کادر */
+}
+.game-container {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative; /* موقعیت‌یابی دکمه‌ها نسبت به این کادر */
+}
+@media (max-width: 768px) {
+    /* فاصله دادن به بخش‌های متنی */
+    h1 {
+      margin-top: 60px; /* فاصله بیشتر از بالا برای پایین آوردن عنوان */
+    }
+  
+    .intro-text {
+      margin-top: 40px; /* فاصله از بالا */
+    }
+  
+    #currentKid {
+      margin-top: 40px; /* فاصله از بالا */
+    }
+  
+    .input-container {
+      margin-top: 40px; /* فاصله از بالا */
+    }
+  
+    #feedback {
+      margin-top: 40px; /* فاصله از بالا */
+    }
+  
+    #gameStatus {
+      margin-top: 40px; /* فاصله از بالا */
+    }
+  
+    #scoreBoard {
+      margin-top: 40px; /* فاصله از بالا */
+    }
+  
+    /* دکمه‌های راهنما و جواب کامل */
+    #hintButton, #fullAnswerButton {
+      position: absolute; /* دکمه‌ها نسبت به کادر بالا سمت راست قرار می‌گیرند */
+      right: 10px;
+    }
+  
+    /* فاصله بین دکمه‌ها */
+    #hintButton {
+      top: 10px; /* فاصله از بالا */
+    }
+  
+    #fullAnswerButton {
+      top: 50px; /* فاصله بیشتر از دکمه اول */
+    }
+  
+    /* اطمینان از نمایش تایمر */
+    #timer {
+      display: block; /* اطمینان از اینکه تایمر نمایش داده می‌شود */
+      margin-top: 20px; /* فاصله از بالا */
+      font-size: 18px; /* اندازه فونت */
+      color: #ff4081; /* رنگ تایمر */
+    }
+  }
+  

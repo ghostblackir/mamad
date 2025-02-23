@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>بازی ریاضی</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/st2.css">
+</head>
+<body>
+
+  <div class="game-container">
+    <h1>بازی ریاضی با دایی و عمو</h1>
+    <p class="intro-text">خوب بچه‌ها! به سوالات جواب بدید و دقت کنید که تقلب نکنید! هواسم بهتون هست!</p>
+    
+    <!-- دکمه شروع -->
+    <button id="startButton" onclick="startGame()">شروع</button>
+    
+    <div id="currentKid">
+      <!-- اسم و سوال اینجا نمایش داده میشه -->
+    </div>
+    
+    <div class="input-container">
+      <input type="number" id="answer" placeholder="جواب رو وارد کن" style="display: none;" />
+      <button id="checkButton" onclick="checkAnswer()" style="display: none;">بررسی جواب</button>
+      <!-- دکمه‌های جدید برای حلما -->
+      <button id="hintButton" style="display:inline-block; pointer-events: none;">راهنما (10)</button>
+<button id="fullAnswerButton" style="display:inline-block; pointer-events: none;">جواب کامل (20) </button>
+
+    </div>
+    
+    <p id="feedback" style="display: none;"></p>
+    
+    <!-- تایمر زیر کادر ورود جواب -->
+    <div id="gameStatus" style="display: none;">
+        <p id="timer">زمان باقی‌مانده: </p>
+      </div>
+      
+    <div id="scoreBoard">
+      <h2>جدول امتیازات</h2>
+      <table>
+        <tr>
+          <th>نام</th>
+          <th>امتیاز</th>
+          <th>سکه‌ها</th>
+        </tr>
+        <tr>
+          <td>مائده</td>
+          <td id="score-maede">0</td>
+          <td id="coins-maede">0</td>
+        </tr>
+        <tr>
+          <td>امیر علی</td>
+          <td id="score-amir">0</td>
+          <td id="coins-amir">0</td>
+        </tr>
+        <tr>
+          <td>طاها</td>
+          <td id="score-taha">0</td>
+          <td id="coins-taha">0</td>
+        </tr>
+        <tr>
+          <td>حلما</td>
+          <td id="score-helma">0</td>
+          <td id="coins-helma">0</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

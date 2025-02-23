@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>بازی ریاضی</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #fce4ec;
+      color: #4a148c;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 36px;
+      color: #ff4081;
+      margin-bottom: 20px;
+    }
+
+    .game-rules {
+      font-size: 20px;
+      margin-top: 40px;
+      font-weight: bold;
+      color: #4a148c;
+    }
+
+    .rule-text {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #4a148c;
+      line-height: 1.6;
+    }
+
+    .independence-message {
+      font-size: 24px;
+      font-weight: bold;
+      color: #0091ea;
+      margin-top: 40px;
+      text-transform: uppercase;
+    }
+    
+    .countdown {
+      font-size: 30px;
+      color: #ff4081;
+      margin-top: 20px;
+    }
+
+    /* برای دکمه‌ها */
+    button {
+      padding: 12px 30px;
+      background-color: #ff80ab;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    button:hover {
+      background-color: #ff4081;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>بازی ریاضی</h1>
+  
+  <div class="game-rules">
+    <p class="rule-text">
+      <strong>قانون بازی:</strong><br>
+      این یک بازی ریاضی است. شما باید جواب صحیح معادلات ریاضی را حدس بزنید.<br>
+      هر معادله که به درستی حل کنید، امتیاز خواهید گرفت.<br>
+      در هر مرحله، سوالات دشوارتر می‌شوند، پس آماده باشید!<br><br>
+      <span style="font-size: 22px; color: #ff4081;">یادتون باشه، بازی باید به سرعت انجام بشه!</span>
+    </p>
+  </div>
+
+  <div class="countdown">
+    <p>صفحه بعدی پس از 10 ثانیه بارگذاری می‌شود...</p>
+  </div>
+
+  <div class="independence-message">
+    استقلالی باشی، 30 امتیاز ممد بهتون میده!
+  </div>
+
+  <script>
+    // شمارش معکوس
+    let countdown = 10;
+    const countdownElement = document.querySelector('.countdown p');
+
+    const countdownInterval = setInterval(() => {
+      countdownElement.textContent = `صفحه بعدی پس از ${countdown} ثانیه بارگذاری می‌شود...`;
+      countdown--;
+      
+      if (countdown < 0) {
+        clearInterval(countdownInterval);
+        window.location.href = 'mamad.html'; // بعد از 10 ثانیه به صفحه mamad.html هدایت می‌شود
+      }
+    }, 1000);
+  </script>
+
+</body>
+</html>

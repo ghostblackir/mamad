@@ -1,0 +1,146 @@
+/* کادر بازی با رنگ‌های قطاری */
+.game-container {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0px 6px 25px rgba(255, 128, 171, 0.5); /* سایه درخشان برای کادر */
+    animation: rainbow-border 3s linear infinite; /* انیمیشن برای رنگ‌های قطاری */
+  }
+  
+  /* انیمیشن رنگ‌های قطاری */
+  @keyframes rainbow-border {
+    0% {
+      border: 5px solid red;
+    }
+    14% {
+      border: 5px solid orange;
+    }
+    28% {
+      border: 5px solid yellow;
+    }
+    42% {
+      border: 5px solid green;
+    }
+    57% {
+      border: 5px solid blue;
+    }
+    71% {
+      border: 5px solid indigo;
+    }
+    85% {
+      border: 5px solid violet;
+    }
+    100% {
+      border: 5px solid red;
+    }
+  }
+  
+  /* دکمه‌ها */
+  button {
+    padding: 12px 30px;
+    background-color: #ff80ab;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 0px 4px 15px rgba(255, 128, 171, 0.6); /* سایه درخشان */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #ff4081;
+    transform: scale(1.1);
+    box-shadow: 0px 6px 20px rgba(255, 64, 129, 0.8);
+  }
+  
+  button:active {
+    background-color: #ff1f5e;
+    transform: scale(0.95);
+    box-shadow: 0px 2px 10px rgba(255, 64, 129, 0.4);
+  }
+  
+  /* دکمه‌های راهنما و جواب کامل */
+  #hintButton, #fullAnswerButton {
+    position: absolute;
+    font-size: 14px;
+    padding: 5px 10px;
+    z-index: 10;
+    background-color: #ff80ab;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(255, 128, 171, 0.6);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  #hintButton:hover, #fullAnswerButton:hover {
+    background-color: #ff4081;
+    transform: scale(1.1);
+    box-shadow: 0px 6px 20px rgba(255, 64, 129, 0.8);
+  }
+  
+  #hintButton:active, #fullAnswerButton:active {
+    background-color: #ff1f5e;
+    transform: scale(0.95);
+    box-shadow: 0px 2px 10px rgba(255, 64, 129, 0.4);
+  }
+  
+  /* متن‌ها و سایر المان‌ها */
+  h1, .intro-text, .question, #feedback, #timer, #coins, #currentKid {
+    text-shadow: 1px 1px 5px rgba(255, 128, 171, 0.7); /* سایه متن برای درخشان‌تر شدن */
+  }
+  
+  h1 {
+    font-size: 36px;
+    color: #ff4081;
+    margin-bottom: 20px;
+  }
+  
+  #timer, #coins, #currentKid {
+    font-size: 20px;
+    color: #ff4081;
+    margin-top: 20px;
+  }
+  
+  /* جدول امتیازات */
+  table {
+    width: 60%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0px 4px 10px rgba(255, 128, 171, 0.6); /* سایه درخشان برای جدول */
+  }
+  
+  th, td {
+    padding: 10px;
+    border: 1px solid #ff4081;
+    text-align: center;
+    background: linear-gradient(135deg, #ff80ab, #ff4081);
+  }
+  
+  th {
+    background-color: #ff4081;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.7);
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f1f1f1;
+  }
+  
+  /* برای صفحه موبایل */
+  @media (max-width: 768px) {
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  
+    #hintButton, #fullAnswerButton {
+      font-size: 12px;
+      padding: 5px 8px;
+    }
+  }
+  
+
+  
